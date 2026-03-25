@@ -17,10 +17,6 @@ html, body {
 }
 
 
-/* =============================================
-   HEADER — MOBILE FIRST
-   ============================================= */
-
 #header {
   width: 100%;
   background-color: #1f5aa6;
@@ -102,9 +98,7 @@ html, body {
 }
 
 
-/* =============================================
-   STRIP — MOBILE FIRST
-   ============================================= */
+
 
 #strip {
   width: 100%;
@@ -154,10 +148,6 @@ html, body {
 }
 
 
-/* =============================================
-   HERO SECTION — MOBILE FIRST
-   ============================================= */
-
 #hero-section {
   width: 100%;
   padding: 10px;
@@ -193,10 +183,6 @@ html, body {
   font-size: 12px;
 }
 
-
-/* =============================================
-   EASTER BANNER — MOBILE FIRST
-   ============================================= */
 
 #easter-banner {
   width: 100%;
@@ -234,11 +220,6 @@ html, body {
   object-fit: cover;
   border-radius: 10px;
 }
-
-
-/* =============================================
-   PRODUCT CARDS — MOBILE FIRST
-   ============================================= */
 
 #product-section {
   width: 100%;
@@ -314,9 +295,7 @@ html, body {
 }
 
 
-/* =============================================
-   TABLET (min-width: 600px)
-   ============================================= */
+/* TABLET (min-width: 600px) */
 
 @media screen and (min-width: 600px) {
 
@@ -402,9 +381,7 @@ html, body {
 }
 
 
-/* =============================================
-   LARGE TABLET / SMALL DESKTOP (min-width: 769px)
-   ============================================= */
+/*   LARGE TABLET / SMALL DESKTOP (min-width: 769px)  */
 
 @media screen and (min-width: 769px) {
 
@@ -524,9 +501,7 @@ html, body {
 }
 
 
-/* =============================================
-   DESKTOP (min-width: 1200px)
-   ============================================= */
+/* DESKTOP (min-width: 1200px) */
 
 @media screen and (min-width: 1200px) {
 
