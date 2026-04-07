@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kroger</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="main">
+
+    <!-- Header -->
+    <div id="header">
+      
+      <!-- Hamburger Icon (Mobile Only) -->
+      <div class="hamburger" id="hamburger">
+        <i class="ri-menu-line"></i>
+      </div>
+
+      <!-- Mobile Nav Container -->
+      <nav class="mobile-nav" id="mobileNav">
+
+        <div class="text">
+          <p>Shop</p>
+        </div>
+        <div class="text">
+          <p>Save</p>
+        </div>
+        <div class="text">
+          <p>Pickup & Delivery</p>
+        </div>
+        <div class="text">
+          <p>Services</p>
+        </div>
+        <div class="text">
+          <p>Pharmacy & Health</p>
+        </div>
+
+        <!-- Search bar -->
+        <div class="search-box">
+          <input type="text" placeholder="Search Products" />
+          <div class="icon">
+            <i class="ri-search-line"></i>
+          </div>
+        </div>
+
+      </nav>
+
+      <!-- Desktop Nav Items -->
+      <div class="desktop-nav" id="desktopNav">
+        <div class="text">
+          <p>Shop</p>
+        </div>
+        <div class="text">
+          <p>Save</p>
+        </div>
+        <div class="text">
+          <p>Pickup & Delivery</p>
+        </div>
+        <div class="text">
+          <p>Services</p>
+        </div>
+        <div class="text">
+          <p>Pharmacy & Health</p>
+        </div>
+
+        <!-- Search bar -->
+        <div class="search-box">
+          <input type="text" placeholder="Search Products" />
+          <div class="icon">
+            <i class="ri-search-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Icons -->
+      <div class="text" id="txticon">
+        <i class="ri-user-3-line"></i>
+        <p>Sign In</p>
+        <i class="ri-arrow-down-s-line"></i>
+      </div>
+
+      <div class="text" id="carticon">
+        <i class="ri-shopping-cart-2-line"></i>
+      </div>
+    </div>
+
+    <!-- Strip -->
+    <div id="strip">
+
+      <div id="substrip">
+        <p>Pickup at Rolla (Locker Pickup)</p>
+        <i class="ri-arrow-down-s-line"></i>
+      </div>
+      <div class="strtext">
+        <p>Digital Coupons</p>
+      </div>
+      <div class="strtext">
+        <p>Weekly Ad</p>
+      </div>
+      <div class="strtext">
+        <p>Watch Party Favorites</p>
+      </div>
+      <div class="strtext">
+        <p>Easter Prep</p>
+      </div>
+      <div class="strtext">
+        <p>Gift Cards</p>
+      </div>
+      <div class="strtext">
+        <p>Meal Planning & Recipes</p>
+      </div>
+      <div class="strtext">
+        <p>Store Locator</p>
+      </div>
+
+    </div>
+
+    <!-- Hero Section -->
+    <div id="hero-section">
+      <div class="hero-item">
+        <div class="icon">
+          <i class="ri-price-tag-3-line"></i>
+        </div>
+        <p>Top Deals</p>
+      </div>
+
+      <div class="hero-item">
+        <div class="icon">
+          <i class="ri-coupon-3-line"></i>
+        </div>
+        <p>Digital Coupons</p>
+      </div>
+
+      <div class="hero-item">
+        <div class="icon">
+          <i class="ri-calendar-event-line"></i>
+        </div>
+        <p>Weekly Ad</p>
+      </div>
+
+      <div class="hero-item">
+        <div class="icon">
+          <i class="ri-shopping-cart-2-line"></i>
+        </div>
+        <p>Start Your Order</p>
+      </div>
+
+      <div class="hero-item">
+        <div class="icon">
+          <i class="ri-medicine-bottle-line"></i>
+        </div>
+        <p>Pharmacy & Health</p>
+      </div>
+
+      <div class="hero-item">
+        <div class="icon">
+          <i class="ri-discount-percent-line"></i>
+        </div>
+        <p>Save More With Boost</p>
+      </div>
+
+      <div class="hero-item">
+        <div class="icon">
+          <i class="ri-restaurant-2-line"></i>
+        </div>
+        <p>Deli & Party Trays</p>
+      </div>
+
+      <div class="hero-item">
+        <div class="icon">
+          <i class="ri-cake-3-line"></i>
+        </div>
+        <p>Custom Cakes</p>
+      </div>
+    </div>
+
+    <!-- Easter Meal Banner -->
+    <div id="easter-banner">
+      <div class="easter-banner-text">
+        <h2>Prep Your Easter Meal</h2>
+        <p>$5⁴⁶/lb. Kroger® Spiral Sliced Ham with coupon</p>
+      </div>
+      <div class="easter-banner-images">
+        <img src="./easter_meat.webp" alt="Easter Ham" />
+        <img src="./Easter_Bundle_Kielbasa.webp" alt="Easter Dinner" />
+      </div>
+    </div>
+
+    <!-- Featured Deals Section -->
+<div id="product-section">
+  <!-- Products will come from API -->
+</div>
+
+<!-- Modal popup -->
+<div id="modal">
+  <div class="modal-content">
+
+    <span id="closeModal">&times;</span>
+
+    <div class="modal-body">
+
+      <div class="modal-img">
+        <img id="modalImage" src="" alt="">
+      </div>
+
+      <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+
+        <div id="modalStars"></div>
+
+        <p id="modalDesc"></p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+  </div>
+
+  <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
