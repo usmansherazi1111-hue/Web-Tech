@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <h1>Products Page</h1>
+
+    <!-- FILTER FORM -->
+
+    <form action="/products" method="GET">
+
+        <input 
+            type="text" 
+            name="search"
+            placeholder="Search Product"
+            value="<%= search %>"
+        >
+
+        <select name="category">
+
+            <option value="">All Categories</option>
+
+            <option value="Vegetables">Vegetables</option>
+
+            <option value="Beverages">Beverages</option>
+
+            <option value="Snacks">Snacks</option>
+
+            <option value="Frozen">Frozen</option>
+
+            <option value="Condiments">Condiments</option>
+
+            <option value="Grains">Grains</option>
+
+            <option value="Meat">Meat</option>
+
+            <option value="Seafood">Seafood</option>
+
+            <option value="Fruits">Fruits</option>
+
+            <option value="Dairy">Dairy</option>
+
+            <option value="Breakfast">Breakfast</option>
+
+            <option value="Bakery">Bakery</option>
+
+        </select>
+
+        <input 
+            type="number"
+            name="minPrice"
+            placeholder="Min Price"
+            value="<%= minPrice %>"
+        >
+
+        <input 
+            type="number"
+            name="maxPrice"
+            placeholder="Max Price"
+            value="<%= maxPrice %>"
+        >
+
+        <button type="submit">Filter</button>
+
+    </form>
+
+    <!-- PRODUCTS -->
+
+    <div id="product-section">
+
+        <% products.forEach(product => { %>
+
+            <div class="product-card">
+
+                <img src="<%= product.image %>" alt="">
+
+                <h3><%= product.name %></h3>
+
+                <p>Price: $<%= product.price %></p>
+
+                <p>Category: <%= product.category %></p>
+
+                <p>Rating: <%= product.rating %></p>
+
+                <p>Stock: <%= product.stock %></p>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+    <!-- PAGINATION -->
+
+    <div style="margin-top: 20px;">
+
+        <% if(currentPage > 1) { %>
+
+            <a href="/products?page=<%= currentPage - 1 %>">
+                Previous
+            </a>
+
+        <% } %>
+
+        <% for(let i = 1; i <= totalPages; i++) { %>
+
+            <a href="/products?page=<%= i %>">
+                <%= i %>
+            </a>
+
+        <% } %>
+
+        <% if(currentPage < totalPages) { %>
+
+            <a href="/products?page=<%= currentPage + 1 %>">
+                Next
+            </a>
+
+        <% } %>
+
+    </div>
+
+</body>
+</html>
