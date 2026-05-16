@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>Kroger Store</h2>
+
+    <div>
+        <a href="/products?page=1">Products</a>
+
+        <% if(currentUser) { %>
+            <a href="/profile">My Profile</a>
+
+            <% if(currentUser.role === 'admin') { %>
+                <a href="/admin/dashboard">Admin Panel</a>
+            <% } %>
+
+            <a href="/logout">Logout</a>
+        <% } else { %>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        <% } %>
+    </div>
+</div>
+
+<div class="hero">
+    <h1>Fresh Grocery Products</h1>
+    <p>Explore quality products with smart filtering and secure authentication.</p>
+</div>
+
+<div class="products-container">
+
+    <% if(success.length > 0) { %>
+        <div class="message success"><%= success %></div>
+    <% } %>
+
+    <% if(error.length > 0) { %>
+        <div class="message error"><%= error %></div>
+    <% } %>
+
+    <form action="/products" method="GET" class="filter-box">
+        <input type="text" name="search" placeholder="Search Product" value="<%= search %>">
+
+        <select name="category">
+            <option value="">All Categories</option>
+
+            <% categories.forEach(category => { %>
+                <option value="<%= category %>" <%= selectedCategory === category ? 'selected' : '' %>>
+                    <%= category %>
+                </option>
+            <% }) %>
+        </select>
+
+        <input type="number" name="minPrice" placeholder="Min Price" value="<%= minPrice %>">
+        <input type="number" name="maxPrice" placeholder="Max Price" value="<%= maxPrice %>">
+
+        <button type="submit">Apply Filters</button>
+    </form>
+
+    <div class="product-grid">
+        <% products.forEach(product => { %>
+            <div class="product-card">
+                <img src="<%= product.image %>" alt="">
+                <h3><%= product.name %></h3>
+                <p><strong>Price:</strong> $<%= product.price %></p>
+                <p><strong>Category:</strong> <%= product.category %></p>
+                <p><strong>Rating:</strong> ⭐ <%= product.rating %></p>
+                <p><strong>Stock:</strong> <%= product.stock %></p>
+            </div>
+        <% }) %>
+    </div>
+
+    <div class="pagination">
+        <% for(let i = 1; i <= totalPages; i++) { %>
+            <a href="/products?page=<%= i %>"><%= i %></a>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>

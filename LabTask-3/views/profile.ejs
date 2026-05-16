@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Profile</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="navbar">
+<h2>Kroger Store</h2>
+<div>
+<a href="/products?page=1">Products</a>
+<a href="/logout">Logout</a>
+</div>
+</div>
+
+<div class="profile-card">
+<h1>My Profile</h1>
+<p><strong>Name:</strong> <%= currentUser.name %></p>
+<p><strong>Email:</strong> <%= currentUser.email %></p>
+<p><strong>Role:</strong> <%= currentUser.role %></p>
+<br>
+<a href="/products?page=1" class="btn" style="display:inline-block;text-align:center;text-decoration:none;">Back to Store</a>
+</div>
+</body>
+</html>
